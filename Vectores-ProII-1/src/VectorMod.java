@@ -20,7 +20,9 @@ public class VectorMod {
 					int aux;
 					aux=numeros[i];
 					numeros[i]=numeros[i+1];
-					numeros[i+1]=aux;				}
+					numeros[i+1]=aux;
+				}
+				
 			}
 		}
 		
@@ -29,7 +31,6 @@ public class VectorMod {
 			
 		System.out.println("Los numeros guardados en el vector son " + i + " valor " + numeros [i] );
 		
-			//System.out.println(numeros[i]);
 		}
 		
 	}	
