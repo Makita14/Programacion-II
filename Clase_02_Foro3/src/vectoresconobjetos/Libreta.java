@@ -38,7 +38,7 @@ public class Libreta {
 		boolean lugar=  this. quedaLugar ();
 		System.out.println("lugar = "+lugar);
 		if (lugar) {
-			int i = -1 ;
+			int i = 0 ;
 			do {
 				i ++ ;
 			} while (nombres [i] !=  null );	
@@ -49,11 +49,11 @@ public class Libreta {
 	}
 	
 	public  void  listarLibreta () {
-		for (int i = 0 ; i < nombres.length ; i ++ ) { 
+		for (int i = 1 ; i < nombres.length ; i ++ ) { 
 			if (nombres [i]!=null) { 
-				System.out.println ((i+1) + " ) -> " + nombres [i]);	
+				System.out.println (i + " ) -> " + nombres [i]);	
 			}else { 
-				System.out.println ((i+1) + " ) -> ");
+				System.out.println (i + " ) -> ");
 			}
 		}
 	}
@@ -67,7 +67,7 @@ public class Libreta {
 	}
 	
 	public void eliminarPosicion (int posicionAEliminar) {
-		for(int i=0; i<nombres.length; i++) {
+		for(int i=1; i<nombres.length; i++) {
 			for(int p=0; p<nombres.length; p++) {
 				if(p==posicionAEliminar) {
 					nombres[p]="";

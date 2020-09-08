@@ -14,8 +14,9 @@ public class ControladorBasico {
 		miLibreta.listarLibreta();
 		miLibreta.agregarAlibreta ("Pedro", 12);
 		miLibreta.listarLibreta (); */
-		
+		String nomb;
 		int opci;
+		int lugar;
 		do {
 			System.out.println("MENU PRINCIPAL Y OBLIGATORIO");
 			System.out.println("----------------------------");
@@ -29,10 +30,10 @@ public class ControladorBasico {
 			
 			if(opci==1) {
 				System.out.println("Intruduzca un nombre");
-				String nomb=leer.next();
+				nomb=leer.next();
 				System.out.println("Ingrece una posicion");
-				int pos=leer.nextInt();
-				miLibreta.agregarAlibreta(nomb,pos);
+				lugar=leer.nextInt();
+				miLibreta.agregarAlibreta(nomb,lugar);
 			}
 			
 			if(opci==2) {
@@ -41,8 +42,8 @@ public class ControladorBasico {
 			
 			if(opci==3) {
 				System.out.println("Ingrese la posicion que desea borrar");
-				int posicionAEliminar=leer.nextInt();
-				miLibreta.eliminarPosicion(posicionAEliminar);
+				lugar=leer.nextInt();
+				miLibreta.eliminarPosicion(lugar);
 			}
 			
 			if(opci==4) {
@@ -53,5 +54,5 @@ public class ControladorBasico {
 		}while(opci !=5);
 		
 		leer.close();	
-	}
+}
 }

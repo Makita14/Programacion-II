@@ -4,7 +4,7 @@ import vectoresconobjetos.Libreta;
 public class Controlador {
 	public  static  void  main ( String [] args ) {
 		Scanner leer = new Scanner (System.in);
-		Libreta miLibretita =  new  Libreta ( 3 );
+		Libreta miLibretita =  new  Libreta ( 4 );
 		/*miLibretita . agregarAlibreta ( " Francisco " );
 		miLibretita . listarLibreta ();
 		miLibretita . agregarAlibreta ( " Fernando " );
