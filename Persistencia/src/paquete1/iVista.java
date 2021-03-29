@@ -12,6 +12,6 @@ String Separador = "#";
 	
 	int eliminarContacto(ArrayList<String> cont);
 	
-	String agregarContacto();
+	String agregarContacto(ArrayList<String> miLibreta);
 
 }
