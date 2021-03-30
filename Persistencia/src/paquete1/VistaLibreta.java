@@ -26,17 +26,17 @@ public class VistaLibreta implements iVista {
 			}	
 		}
 	
-		public int eliminarContacto(ArrayList<String> cont) {
+		public ArrayList<String> eliminarContacto(ArrayList<String> cont) {
 			System.out.println("------ Eliminar Contacto ------");
 			for(int i=0; i<cont.size(); i++) {
 				System.out.println(cont.get(i));
 			}
 			int tmp_op = Leer.nextInt();
 			cont.remove(tmp_op);
-			return tmp_op;
+			return cont;
 		}
 	
-		public String agregarContacto(ArrayList<String> miLibreta) {
+		public ArrayList<String> agregarContacto(ArrayList<String> miLibreta) {
 			// TODO Auto-generated method stub
 			System.out.println("------ Agregar Contacto ------");
 			for(int i=0; i<miLibreta.size(); i++) {
@@ -44,6 +44,6 @@ public class VistaLibreta implements iVista {
 			}
 			String tmp_nuevoContacto = LeerString.next();
 			miLibreta.add(tmp_nuevoContacto);
-			return tmp_nuevoContacto;
+			return miLibreta;
 		}
 }		

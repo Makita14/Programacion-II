@@ -95,7 +95,7 @@ public class GestorArchivos {
          * El archivo será guardado en la ruta: C:MisFicheros
          *  si no tiene esa carpeta debe crearla y darle los atributos adecuados
          */
-        String empaquetado = empaquetador(miArray,"*");
+        String empaquetado = empaquetador(miArray,"#");
         guardar(nombreArchivo, empaquetado);
     }
 
@@ -105,7 +105,7 @@ public class GestorArchivos {
      */
     public static ArrayList cargarArray(String nombreArchivo){
         String leido = cargar(nombreArchivo);
-        ArrayList<String> retorno = desempaquetador(leido,"*");
+        ArrayList<String> retorno = desempaquetador(leido,"#");
         return retorno;
     }
 }

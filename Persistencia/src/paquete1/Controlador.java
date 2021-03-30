@@ -47,6 +47,9 @@ public class Controlador {
 		//que implementa la interface iVista
 				
 		iVista miVistaLib = new VistaLibreta();
+		//GestorArchivos miGestor = new GestorArchivos();
+		
+		
 		int tmp_item;
 		do {		
 		//Instancio un menú
@@ -56,10 +59,15 @@ public class Controlador {
 		miMenu.add("Eliminar Contacto");
 				
 		//Instancio una lista de contactos
-		ArrayList<String> miLibreta = new ArrayList<>();
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<String> miLibreta = GestorArchivos.cargarArray("miLibreta.txt");
+		
+		//ArrayList<String> miLibreta = new ArrayList<>();
+		/*
 		miLibreta.add("Enzo");
 		miLibreta.add("Melina");
-		miLibreta.add("Analía");
+		miLibreta.add("Analía");*/
 				
 		tmp_item = miVistaLib.mostrarMenu(miMenu);		
 		System.out.println("-controlador-> "+tmp_item);
@@ -73,18 +81,19 @@ public class Controlador {
 		//Agrega un nuevo contacto
 		//
 		else if(tmp_item==1) {		
-			String tmp_nuevoContacto = miVistaLib.agregarContacto(miLibreta);
+			ArrayList<String> tmp_nuevoContacto = miVistaLib.agregarContacto(miLibreta);
 			System.out.println("-Nuevo contacto-> "+tmp_nuevoContacto);	
 			miVistaLib.agregarContacto(miLibreta);
+			GestorArchivos.guardarArray(tmp_nuevoContacto, "miLibreta.txt");
 		}
 		
 		//
 		//Elmina el contacto segun su posicion empezando de 0
 		//
 		else if(tmp_item==2) {
-			int tmp_contacto = miVistaLib.eliminarContacto(miLibreta);
+			ArrayList<String> tmp_contacto = miVistaLib.eliminarContacto(miLibreta);
 			System.out.println("-Contacto a eliminar-> "+tmp_contacto);
-			miVistaLib.eliminarContacto(miLibreta);
+			GestorArchivos.guardarArray(tmp_contacto, "miLibreta.txt");
 		};
 		
 	}while(tmp_item != 3);

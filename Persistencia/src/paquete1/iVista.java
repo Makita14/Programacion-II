@@ -10,8 +10,8 @@ String Separador = "#";
 	
 	void mostrarLibreta(ArrayList<String> libreta);
 	
-	int eliminarContacto(ArrayList<String> cont);
+	ArrayList<String> eliminarContacto(ArrayList<String> cont);
 	
-	String agregarContacto(ArrayList<String> miLibreta);
+	ArrayList<String> agregarContacto(ArrayList<String> miLibreta);
 
 }
